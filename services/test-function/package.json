@@ -1,0 +1,26 @@
+{
+  "name": "@aws-mono-template/test-function",
+  "version": "1.0.0",
+  "main": "dist/index",
+  "types": "dist/index",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn clean && yarn compile",
+    "clean": "rm -rf ./dist && rm -rf tsconfig.build.tsbuildinfo",
+    "compile": "tsc -b tsconfig.build.json",
+    "watch": "tsc -w",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@aws-mono-template/services-common": "*",
+    "aws-sdk": "^2.851.0",
+    "aws-xray-sdk": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.84",
+    "@types/node": "^16.11.4"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "aws-mono-template",
+  "version": "1.0.0",
+  "description": "Template for generating Typescript Mono Repo's that integration with AWS CDK",
+  "repository": "https://github.com/EpicOfChaos/AWS-Mono-Template.git",
+  "author": "smithbr4@gmail.com",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "infrastructure",
+    "services/*"
+  ],
+  "scripts": {
+    "common": "yarn workspace @aws-mono-template/services-common",
+    "test-function": "yarn workspace @aws-mono-template/test-function",
+    "build": "yarn common build && yarn test-function build",
+    "clean": "yarn common clean && yarn test-function clean",
+    "lint": "npx eslint . --fix --ext .js,.ts,.jsx",
+    "test": ""
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.6.1",
+    "@typescript-eslint/parser": "^4.6.1",
+    "esbuild": "0",
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-import-resolver-node": "^0.3.4",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^5.0.3",
+    "eslint-plugin-unicorn": "^23.0.0",
+    "husky": "^4.3.0",
+    "prettier": "^2.1.2",
+    "prettier-eslint": "^11.0.0",
+    "typescript": "^4.0.5"
+  },
+  "resolutions": {
+    "@typescript-eslint/eslint-plugin": "^4.6.1",
+    "@typescript-eslint/parser": "^4.6.1"
+  }
+}
