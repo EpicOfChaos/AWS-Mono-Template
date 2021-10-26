@@ -5,6 +5,8 @@
     "infrastructure": "bin/infrastructure.js"
   },
   "scripts": {
+    "deploy": "npx cdk deploy",
+    "destroy": "npx cdk destroy",
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",

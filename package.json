@@ -11,6 +11,9 @@
     "services/*"
   ],
   "scripts": {
+    "deploy": "yarn build && yarn infrastructure deploy",
+    "destroy": "yarn build && yarn infrastructure destroy",
+    "infrastructure": "yarn workspace @aws-mono-template/infrastructure",
     "common": "yarn workspace @aws-mono-template/services-common",
     "test-function": "yarn workspace @aws-mono-template/test-function",
     "build": "yarn common build && yarn test-function build",
