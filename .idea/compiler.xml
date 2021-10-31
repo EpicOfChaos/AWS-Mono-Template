@@ -3,6 +3,7 @@
   <component name="TypeScriptCompiler">
     <option name="recompileOnChanges" value="true" />
     <option name="typeScriptCompilerParams" value="-b tsconfig.build.json" />
+    <option name="useService" value="false" />
     <option name="versionType" value="EMBEDDED" />
   </component>
 </project>

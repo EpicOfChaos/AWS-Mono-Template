@@ -4,8 +4,7 @@
    "baseUrl": "./services",
     "paths": {
       "@aws-mono-template/services-common": ["common/src"],
-      "@aws-mono-template/test-function": ["test-function/src"],
-      "@aws-mono-template/*": ["*/src"]
+      "@aws-mono-template/test-function": ["test-function/src"]
     }
   }
 }
